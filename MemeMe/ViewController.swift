@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController  , UIPageViewControllerDelegate , UINavigationControllerDelegate{
+class ViewController: UIViewController  , UIImagePickerControllerDelegate , UINavigationControllerDelegate{
 
     @IBOutlet weak var topLabel: UITextField!
     @IBOutlet weak var bottomLabel: UITextField!
@@ -50,6 +50,22 @@ class ViewController: UIViewController  , UIPageViewControllerDelegate , UINavig
         present(contoller, animated: true, completion: nil)
         
     }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+     
+        
+        if let image = info[.originalImage]{
+            print("image picker  controller")
+            mainImageView.image = image as? UIImage
+            dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        
+    }
+   
+    
 
 }
 
