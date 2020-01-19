@@ -13,6 +13,8 @@
 		CE81FF9623D2EC6900D7DD64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE81FF9423D2EC6900D7DD64 /* Main.storyboard */; };
 		CE81FF9823D2EC6B00D7DD64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE81FF9723D2EC6B00D7DD64 /* Assets.xcassets */; };
 		CE81FF9B23D2EC6B00D7DD64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE81FF9923D2EC6B00D7DD64 /* LaunchScreen.storyboard */; };
+		CE81FFA323D3E21900D7DD64 /* MeMeStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE81FFA223D3E21900D7DD64 /* MeMeStruct.swift */; };
+		CE81FFA623D3EFA800D7DD64 /* ClearTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE81FFA523D3EFA800D7DD64 /* ClearTextFieldDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		CE81FF9723D2EC6B00D7DD64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE81FF9A23D2EC6B00D7DD64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE81FF9C23D2EC6B00D7DD64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE81FFA223D3E21900D7DD64 /* MeMeStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeMeStruct.swift; sourceTree = "<group>"; };
+		CE81FFA523D3EFA800D7DD64 /* ClearTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearTextFieldDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 		CE81FF8D23D2EC6900D7DD64 /* MemeMe */ = {
 			isa = PBXGroup;
 			children = (
+				CE81FFA423D3EF8B00D7DD64 /* Delegates */,
 				CE81FF8E23D2EC6900D7DD64 /* AppDelegate.swift */,
 				CE81FF9023D2EC6900D7DD64 /* SceneDelegate.swift */,
 				CE81FF9223D2EC6900D7DD64 /* ViewController.swift */,
@@ -63,8 +68,17 @@
 				CE81FF9723D2EC6B00D7DD64 /* Assets.xcassets */,
 				CE81FF9923D2EC6B00D7DD64 /* LaunchScreen.storyboard */,
 				CE81FF9C23D2EC6B00D7DD64 /* Info.plist */,
+				CE81FFA223D3E21900D7DD64 /* MeMeStruct.swift */,
 			);
 			path = MemeMe;
+			sourceTree = "<group>";
+		};
+		CE81FFA423D3EF8B00D7DD64 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				CE81FFA523D3EFA800D7DD64 /* ClearTextFieldDelegate.swift */,
+			);
+			path = Delegates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +152,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE81FFA323D3E21900D7DD64 /* MeMeStruct.swift in Sources */,
+				CE81FFA623D3EFA800D7DD64 /* ClearTextFieldDelegate.swift in Sources */,
 				CE81FF9323D2EC6900D7DD64 /* ViewController.swift in Sources */,
 				CE81FF8F23D2EC6900D7DD64 /* AppDelegate.swift in Sources */,
 				CE81FF9123D2EC6900D7DD64 /* SceneDelegate.swift in Sources */,

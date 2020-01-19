@@ -26,7 +26,7 @@
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Save" id="73v-AU-a0R">
                                             <connections>
-                                                <action selector="saveImage:" destination="BYZ-38-t0r" id="r53-7T-y3g"/>
+                                                <action selector="shareImage:" destination="BYZ-38-t0r" id="6Jr-h3-6Du"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -61,7 +61,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mPW-d4-PS8">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mPW-d4-PS8">
                                 <rect key="frame" x="177" y="736.5" width="60" height="18.5"/>
                                 <color key="backgroundColor" red="0.29803921568627451" green="0.29803921568627451" blue="0.29803921568627451" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -94,7 +94,10 @@
                         <outlet property="bottomLabel" destination="mPW-d4-PS8" id="DBp-1P-eTA"/>
                         <outlet property="cameraButton" destination="zfY-jK-9Jf" id="IuI-4g-N7W"/>
                         <outlet property="mainImageView" destination="6bf-UF-Eik" id="P14-Nn-M3j"/>
+                        <outlet property="navigationBar" destination="Gvc-cb-cRs" id="JIn-bL-Mgc"/>
+                        <outlet property="saveButton" destination="73v-AU-a0R" id="VJJ-Ka-xr0"/>
                         <outlet property="shareButton" destination="7WX-8K-2pM" id="sip-rz-Xsp"/>
+                        <outlet property="toolBar" destination="yED-3c-JeR" id="1Ui-cX-DNd"/>
                         <outlet property="topLabel" destination="lgs-vq-vdx" id="9Mx-XR-bha"/>
                     </connections>
                 </viewController>
