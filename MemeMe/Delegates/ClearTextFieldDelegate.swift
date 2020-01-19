@@ -8,11 +8,11 @@
 
 import Foundation
 import UIKit
-class ClearTextFieldDelegate:NSObject ,  UITextViewDelegate{
+class ClearTextFieldDelegate:NSObject ,  UITextFieldDelegate{
   
     
-    func textViewDidBeginEditing(_ textView: UITextView) {
-        textView.text = ""
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.text = ""
     }
 }
 

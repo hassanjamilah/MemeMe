@@ -25,6 +25,7 @@ class ViewController: UIViewController  , UIImagePickerControllerDelegate , UINa
     var tap:UITapGestureRecognizer!
     var isBottomLabel:Bool!
     
+     let clearTextDelegate = ClearTextFieldDelegate()
     
   
     //MARK: Define the text fields attributes
@@ -51,9 +52,10 @@ class ViewController: UIViewController  , UIImagePickerControllerDelegate , UINa
         
         registerObservers()
         
-        let clearTextDelegate = ClearTextFieldDelegate()
-        topLabel.delegate = clearTextDelegate as! UITextFieldDelegate
-        bottomLabel.delegate = clearTextDelegate as! UITextFieldDelegate
+       
+        self.bottomLabel.delegate = clearTextDelegate
+        self.topLabel.delegate = clearTextDelegate
+        
         
     }
     
