@@ -18,6 +18,7 @@ class ViewController: UIViewController  , UIImagePickerControllerDelegate , UINa
     @IBOutlet weak var shareButton: UIBarButtonItem!
     
     var tap:UITapGestureRecognizer!
+    var isBottomLabel:Bool!
     
     //MARK: Define the text fields attributes
     let textAttributes: [NSAttributedString.Key : Any]=[
@@ -97,13 +98,18 @@ class ViewController: UIViewController  , UIImagePickerControllerDelegate , UINa
     
     @objc func keyboardWillShow(_ notification:Notification){
         if bottomLabel.isEditing{
-            
+            isBottomLabel = true
             view.frame.origin.y -= getKeyboardHeight(notification)
+        }else {
+            isBottomLabel = false
         }
     }
     
     @objc func keyboardWillHide(_ notification:Notification){
-        view.frame.origin.y += getKeyboardHeight(notification)
+        if isBottomLabel{
+            
+            view.frame.origin.y += getKeyboardHeight(notification)
+        }
     }
     
     @objc func getKeyboardHeight(_ notification:Notification)->CGFloat{
