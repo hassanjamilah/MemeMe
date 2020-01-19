@@ -16,6 +16,16 @@ class ViewController: UIViewController  , UIImagePickerControllerDelegate , UINa
 
     @IBOutlet weak var cameraButton: UIBarButtonItem!
     @IBOutlet weak var shareButton: UIBarButtonItem!
+    
+    let textAttributes: [NSAttributedString.Key : Any]=[
+        NSAttributedString.Key.font:UIFont(name: "HelveticaNeue-CondensedBlack", size: 24) ,
+        NSAttributedString.Key.foregroundColor:UIColor.white ,
+        NSAttributedString.Key.strokeWidth:-5 ,
+        NSAttributedString.Key.strokeColor:UIColor.black
+       
+        
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let isCameraAvailable = UIImagePickerController.isSourceTypeAvailable(.camera)
@@ -23,6 +33,8 @@ class ViewController: UIViewController  , UIImagePickerControllerDelegate , UINa
             cameraButton.isEnabled = false
         }
         
+        topLabel.defaultTextAttributes = textAttributes
+        bottomLabel.defaultTextAttributes = textAttributes
     }
     
     @IBAction func shareImage(_ sender: Any) {
