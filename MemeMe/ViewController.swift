@@ -73,12 +73,26 @@ class ViewController: UIViewController  , UIImagePickerControllerDelegate , UINa
     
     @IBAction func shareImage(_ sender: Any) {
         let image:UIImage  = generateMemedImage()
-        let meme:MeMe = MeMe(topText: topLabel.text ?? "", bottomText: bottomLabel.text ?? "" , originalImage: mainImageView.image!, resultImage: image)
-        
+       
         let contoller = UIActivityViewController(activityItems: [image], applicationActivities: nil)
        
+        
+        
+       contoller.completionWithItemsHandler = { (activityType: UIActivity.ActivityType?, completed:
+        Bool, arrayReturnedItems: [Any]?, error: Error?) in
+            if completed {
+                let meme:MeMe = MeMe(topText: self.topLabel.text ?? "", bottomText: self.bottomLabel.text ?? "" , originalImage: self.mainImageView.image!, resultImage: image)
+                       
+            } else {
+                self.dismiss(animated: true, completion: nil)
+            }
+            if let shareError = error {
+                print("error while sharing: \(shareError.localizedDescription)")
+            }
+        }
         present(contoller, animated: true, completion: nil)
 
+        
     }
     
     
