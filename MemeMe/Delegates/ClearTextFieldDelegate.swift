@@ -10,7 +10,9 @@ import Foundation
 import UIKit
 class ClearTextFieldDelegate:NSObject ,  UITextFieldDelegate{
   
-    
+    /**
+     Used to clear the text when begin editing.
+     */
     func textFieldDidBeginEditing(_ textField: UITextField) {
         textField.text = ""
     }
