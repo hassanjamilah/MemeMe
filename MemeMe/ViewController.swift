@@ -82,7 +82,9 @@ class ViewController: UIViewController  , UIImagePickerControllerDelegate , UINa
         Bool, arrayReturnedItems: [Any]?, error: Error?) in
             if completed {
                 let meme:MeMe = MeMe(topText: self.topLabel.text ?? "", bottomText: self.bottomLabel.text ?? "" , originalImage: self.mainImageView.image!, resultImage: image)
-                       
+                
+                let delegate = UIApplication.shared.delegate as! AppDelegate
+                delegate.memes.append(meme) ;
             } else {
                 self.dismiss(animated: true, completion: nil)
             }

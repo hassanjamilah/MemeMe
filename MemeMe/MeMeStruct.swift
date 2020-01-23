@@ -12,15 +12,12 @@ struct  MeMe {
     var originalImage:UIImage
     var resultImage:UIImage
     
-    func  doSave() {
-        
-    }
-    
-    
-    func doShare(){
-        
+    static func getSharedMemes() -> [MeMe]{
+        let delegage = UIApplication.shared.delegate as! AppDelegate
+        return delegage.memes
     }
 
+    
     
     
 }

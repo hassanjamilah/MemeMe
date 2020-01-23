@@ -29,7 +29,7 @@
         <!--Table View Controller-->
         <scene sceneID="h7l-Y3-erl">
             <objects>
-                <tableViewController id="fMn-Rm-SgB" userLabel="Table View Controller" sceneMemberID="viewController">
+                <tableViewController id="fMn-Rm-SgB" userLabel="Table View Controller" customClass="MemeTableViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="dl8-DU-aFd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -95,10 +95,10 @@
             </objects>
             <point key="canvasLocation" x="-1193" y="-342"/>
         </scene>
-        <!--Collection View Controller-->
+        <!--Meme Collection View Controller-->
         <scene sceneID="jmB-da-1de">
             <objects>
-                <collectionViewController id="JL9-Nq-zbv" sceneMemberID="viewController">
+                <collectionViewController id="JL9-Nq-zbv" customClass="MemeCollectionViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="J6k-1a-4PL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -243,6 +243,6 @@
         <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="k4p-Mt-ZgN"/>
+        <segue reference="6HV-uh-jBk"/>
     </inferredMetricsTieBreakers>
 </document>
