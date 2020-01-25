@@ -14,16 +14,14 @@ class MemeCollectionViewController: UICollectionViewController {
     var memes:[MeMe]!;
  
     @IBOutlet var mCollectionView: UICollectionView!
-    @IBOutlet weak var memeFlowLayout: UICollectionViewFlowLayout!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("hassan collection view contoller loaded successfully")
         let spacing:CGFloat = 3.0
         let dimension = (view.frame.size.width - (2*spacing))/3
         
-        memeFlowLayout.minimumLineSpacing = 4
-        memeFlowLayout.minimumInteritemSpacing = 4
-        memeFlowLayout.itemSize = CGSize(width: 25, height: 25)
+      
         
     }
     
