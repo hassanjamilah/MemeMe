@@ -13,6 +13,7 @@ private let reuseIdentifier = "MemeCollectionViewCell"
 class MemeCollectionViewController: UICollectionViewController {
     var memes:[MeMe]!;
  
+    @IBOutlet var mCollectionView: UICollectionView!
     @IBOutlet weak var memeFlowLayout: UICollectionViewFlowLayout!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,9 +21,9 @@ class MemeCollectionViewController: UICollectionViewController {
         let spacing:CGFloat = 3.0
         let dimension = (view.frame.size.width - (2*spacing))/3
         
-        memeFlowLayout.minimumLineSpacing = spacing
-        memeFlowLayout.minimumInteritemSpacing = spacing
-        memeFlowLayout.itemSize = CGSize(width: dimension, height: dimension)
+        memeFlowLayout.minimumLineSpacing = 4
+        memeFlowLayout.minimumInteritemSpacing = 4
+        memeFlowLayout.itemSize = CGSize(width: 25, height: 25)
         
     }
     
@@ -31,6 +32,7 @@ class MemeCollectionViewController: UICollectionViewController {
          print("hassan collection view contoller viewd successfully")
         memes = MeMe.getSharedMemes() ;
                print("hassan The size of memes is : \(memes.count)")
+        mCollectionView.reloadData()
     }
     
     /*
@@ -53,18 +55,26 @@ class MemeCollectionViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return memes.count
+        //return memes.count
+        return 10
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let index = indexPath.row ;
        print("index is : \(index)")
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! MemeCollectionViewCell
-        cell.label.text=memes[index].topText
-        cell.imageView.image = memes[index].resultImage
-        
+        //cell.label.text=memes[index].topText
+        //cell.imageView.image = memes[index].resultImage
+        cell.label.text = "Hello"
+        cell.imageView.image = UIImage(named: "share")
         
         return cell
+    }
+    
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let controller = self.storyboard!.instantiateViewController(identifier: "DetailsViewController") as! DetailsViewController
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     
     // MARK: UICollectionViewDelegate

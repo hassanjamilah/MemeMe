@@ -10,6 +10,7 @@ import UIKit
 
 class MemeTableViewController: UITableViewController {
 
+    @IBOutlet var mTableView: UITableView!
     var memes:[MeMe]!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +28,9 @@ class MemeTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         memes = MeMe.getSharedMemes()
+       
+        mTableView.reloadData()
+        
     }
     // MARK: - Table view data source
 
@@ -37,7 +41,9 @@ class MemeTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 10
+        print ("hassan the count is : \(memes.count)")
+        //return memes.count
+        return 5
     }
 
     
@@ -46,9 +52,11 @@ class MemeTableViewController: UITableViewController {
 
         let row = indexPath.row
         //cell.imageView?.image = memes[row].resultImage
-        cell.memeTopLabel.text = "Hello"
-        cell.memeBottomLabel.text = "Hello"
-        print ("Hellllkdfjlksdjfk;lds")
+        //cell.memeTopLabel.text = memes[row].topText
+        //cell.memeBottomLabel.text = memes[row].bottomText
+        
+        cell.imageView?.image = UIImage(named: "share")
+        print ("hassan Hello cell")
         // Configure the cell...
 
         return cell
@@ -63,6 +71,12 @@ class MemeTableViewController: UITableViewController {
     }
     */
 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       let detailController = self.storyboard!.instantiateViewController(withIdentifier: "DetailsViewController") as! DetailsViewController
+             
+              self.navigationController!.pushViewController(detailController, animated: true)
+    }
+    
     /*
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
