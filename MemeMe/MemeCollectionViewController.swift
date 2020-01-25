@@ -63,10 +63,10 @@ class MemeCollectionViewController: UICollectionViewController {
         let index = indexPath.row ;
        print("index is : \(index)")
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! MemeCollectionViewCell
-        //cell.label.text=memes[index].topText
-        //cell.imageView.image = memes[index].resultImage
-        cell.label.text = "Hello"
-        cell.imageView.image = UIImage(named: "share")
+        cell.label.text=memes[index].topText
+        cell.imageView.image = memes[index].resultImage
+        //cell.label.text = "Hello"
+        //cell.imageView.image = UIImage(named: "share")
         
         return cell
     }
