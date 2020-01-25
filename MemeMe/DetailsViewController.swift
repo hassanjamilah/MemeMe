@@ -10,9 +10,14 @@ import UIKit
 
 class DetailsViewController: UIViewController {
 
+    @IBOutlet weak var myImageView: UIImageView!
+    var meme:MeMe!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        if let meme = meme{
+            
+            myImageView.image = meme.resultImage
+        }
         // Do any additional setup after loading the view.
     }
     

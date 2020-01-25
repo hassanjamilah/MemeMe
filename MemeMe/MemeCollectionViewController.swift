@@ -55,8 +55,8 @@ class MemeCollectionViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        //return memes.count
-        return 10
+        return memes.count
+        
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -73,8 +73,7 @@ class MemeCollectionViewController: UICollectionViewController {
     
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let controller = self.storyboard!.instantiateViewController(identifier: "DetailsViewController") as! DetailsViewController
-        self.navigationController?.pushViewController(controller, animated: true)
+        MeMe.viewDetails(index: indexPath.row, controller: self)
     }
     
     // MARK: UICollectionViewDelegate
@@ -107,5 +106,6 @@ class MemeCollectionViewController: UICollectionViewController {
      
      }
      */
-    
+ 
+
 }

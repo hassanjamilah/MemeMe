@@ -17,6 +17,15 @@ struct  MeMe {
         return delegage.memes
     }
 
+    static func viewDetails(index:Int  , controller:UIViewController){
+        
+        let detailController = controller.storyboard!.instantiateViewController(identifier: "DetailsViewController") as! DetailsViewController
+       
+               
+               let meme = getSharedMemes()[index]
+               detailController.meme = meme
+                     controller.navigationController!.pushViewController(detailController, animated: true)
+    }
     
     
     
