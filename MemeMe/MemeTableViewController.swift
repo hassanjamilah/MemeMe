@@ -10,7 +10,7 @@ import UIKit
 
 class MemeTableViewController: UITableViewController {
 
-   
+    var memes:[MeMe]!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,27 +23,37 @@ class MemeTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        memes = MeMe.getSharedMemes()
+    }
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 10
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MemeTableViewCell", for: indexPath) as! MemeTableViewCell
 
+        let row = indexPath.row
+        //cell.imageView?.image = memes[row].resultImage
+        cell.memeTopLabel.text = "Hello"
+        cell.memeBottomLabel.text = "Hello"
+        print ("Hellllkdfjlksdjfk;lds")
         // Configure the cell...
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

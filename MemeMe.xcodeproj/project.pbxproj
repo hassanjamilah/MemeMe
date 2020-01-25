@@ -18,6 +18,7 @@
 		CEBBB29723DBBC4D007ABDF1 /* MemeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBB29623DBBC4D007ABDF1 /* MemeCollectionViewCell.swift */; };
 		CEE76E2623D9B7AC00160E06 /* MemeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE76E2523D9B7AC00160E06 /* MemeTableViewController.swift */; };
 		CEE76E2823D9B7D300160E06 /* MemeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE76E2723D9B7D300160E06 /* MemeCollectionViewController.swift */; };
+		CEF272B023DBF1810054747E /* MemeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF272AF23DBF1810054747E /* MemeTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		CEBBB29623DBBC4D007ABDF1 /* MemeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeCollectionViewCell.swift; sourceTree = "<group>"; };
 		CEE76E2523D9B7AC00160E06 /* MemeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeTableViewController.swift; sourceTree = "<group>"; };
 		CEE76E2723D9B7D300160E06 /* MemeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeCollectionViewController.swift; sourceTree = "<group>"; };
+		CEF272AF23DBF1810054747E /* MemeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				CEE76E2723D9B7D300160E06 /* MemeCollectionViewController.swift */,
 				CE81FF9423D2EC6900D7DD64 /* Main.storyboard */,
 				CEE76E2523D9B7AC00160E06 /* MemeTableViewController.swift */,
+				CEF272AF23DBF1810054747E /* MemeTableViewCell.swift */,
 				CE81FF9723D2EC6B00D7DD64 /* Assets.xcassets */,
 				CE81FF9923D2EC6B00D7DD64 /* LaunchScreen.storyboard */,
 				CE81FF9C23D2EC6B00D7DD64 /* Info.plist */,
@@ -167,6 +170,7 @@
 				CE81FF9323D2EC6900D7DD64 /* ViewController.swift in Sources */,
 				CEE76E2623D9B7AC00160E06 /* MemeTableViewController.swift in Sources */,
 				CEE76E2823D9B7D300160E06 /* MemeCollectionViewController.swift in Sources */,
+				CEF272B023DBF1810054747E /* MemeTableViewCell.swift in Sources */,
 				CE81FF8F23D2EC6900D7DD64 /* AppDelegate.swift in Sources */,
 				CE81FF9123D2EC6900D7DD64 /* SceneDelegate.swift in Sources */,
 			);

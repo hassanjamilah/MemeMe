@@ -17,7 +17,7 @@ class MemeCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("hassan collection view contoller loaded successfully")
-        let spacing:CGFloat = 2.0
+        let spacing:CGFloat = 3.0
         let dimension = (view.frame.size.width - (2*spacing))/3
         
         memeFlowLayout.minimumLineSpacing = spacing
