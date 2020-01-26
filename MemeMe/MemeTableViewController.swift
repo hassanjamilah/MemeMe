@@ -50,5 +50,22 @@ class MemeTableViewController: UITableViewController {
         MeMe.viewDetails(index: indexPath.row, controller: self)
     }
     
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    /**
+     Add the delete when swipe action
+     */
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let myAciton = UITableViewRowAction(style: .destructive, title: "Delete") { (action, indexPath) in
+            let row = indexPath.row
+            let delegage = UIApplication.shared.delegate as! AppDelegate
+            delegage.memes.remove(at: row)
+            self.memes = delegage.memes
+            self.mTableView.reloadData()
+        }
+        return [myAciton]
+    }
     
 }
