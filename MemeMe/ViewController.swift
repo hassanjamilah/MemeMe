@@ -68,6 +68,10 @@ class ViewController: UIViewController  , UIImagePickerControllerDelegate , UINa
     }
     
     
+    @IBAction func dismissAddMeme(_ sender: Any) {
+        print ("Dismiss")
+        self.navigationController?.popToRootViewController(animated: true)
+    }
     
     //MARK: Actions
     
@@ -247,7 +251,7 @@ class ViewController: UIViewController  , UIImagePickerControllerDelegate , UINa
      */
     func disableSaveAndShare(Disable disable:Bool){
         shareButton.isEnabled = !disable
-        saveButton.isEnabled = !disable
+        
     }
 }
 

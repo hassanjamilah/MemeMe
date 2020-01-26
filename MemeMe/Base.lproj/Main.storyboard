@@ -252,9 +252,9 @@
                                                 <action selector="shareImage:" destination="BYZ-38-t0r" id="n7U-Zm-6No"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Save" id="73v-AU-a0R">
+                                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="73v-AU-a0R">
                                             <connections>
-                                                <action selector="shareImage:" destination="BYZ-38-t0r" id="6Jr-h3-6Du"/>
+                                                <action selector="dismissAddMeme:" destination="BYZ-38-t0r" id="cxc-Hr-Aer"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
