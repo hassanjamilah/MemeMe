@@ -12,7 +12,8 @@ private let reuseIdentifier = "MemeCollectionViewCell"
 
 class MemeCollectionViewController: UICollectionViewController {
     var memes:[MeMe]!;
- 
+    var itemsPersRow:CGFloat!
+     let space:CGFloat = 3.0
     @IBOutlet var mCollectionView: UICollectionView!
     
     override func viewDidLoad() {
@@ -27,6 +28,7 @@ class MemeCollectionViewController: UICollectionViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        itemsPersRow = 3.0
          print("hassan collection view contoller viewd successfully")
         memes = MeMe.getSharedMemes() ;
                print("hassan The size of memes is : \(memes.count)")
@@ -53,18 +55,18 @@ class MemeCollectionViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return memes.count
-        
+       // return memes.count
+        return 10
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let index = indexPath.row ;
        print("index is : \(index)")
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! MemeCollectionViewCell
-        cell.label.text=memes[index].topText
-        cell.imageView.image = memes[index].resultImage
-        //cell.label.text = "Hello"
-        //cell.imageView.image = UIImage(named: "share")
+        //cell.label.text=memes[index].topText
+        //cell.imageView.image = memes[index].resultImage
+        cell.label.text = "Hello"
+        cell.imageView.image = UIImage(named: "share")
         
         return cell
     }
@@ -106,4 +108,32 @@ class MemeCollectionViewController: UICollectionViewController {
      */
  
 
+}
+
+extension MemeCollectionViewController:UICollectionViewDelegateFlowLayout{
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let orientation = UIDevice.current.orientation
+        if orientation == .portrait || orientation == .portraitUpsideDown{
+            itemsPersRow = 3.0
+        }else {
+            itemsPersRow = 5.0
+        }
+       
+        let dimension = ( view.frame.width - (itemsPersRow*space))/itemsPersRow
+        
+        return CGSize(width: dimension, height: dimension)
+        
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return space
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return space
+    }
+    
 }
