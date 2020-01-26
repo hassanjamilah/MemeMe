@@ -72,7 +72,6 @@
                                         <constraint firstAttribute="bottom" secondItem="EOC-s5-f6J" secondAttribute="bottom" constant="12" id="ylK-Ql-bps"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.72886071330000002" green="0.94898378650000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="memeBottomLabel" destination="Y75-gY-gX7" id="BRG-Qk-XCw"/>
                                     <outlet property="memeTableImage" destination="EOC-s5-f6J" id="QtC-1l-S7g"/>
@@ -85,7 +84,7 @@
                             <outlet property="delegate" destination="fMn-Rm-SgB" id="bvn-KH-B4t"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="LTe-3l-Tzi">
+                    <navigationItem key="navigationItem" title="Sent Memes" id="LTe-3l-Tzi">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="s5M-nf-YYh">
                             <connections>
                                 <segue destination="BYZ-38-t0r" kind="show" id="k4p-Mt-ZgN"/>
@@ -104,7 +103,7 @@
         <scene sceneID="PZO-1a-Kmq">
             <objects>
                 <navigationController id="ZNj-KI-KZk" userLabel="Table Navigation Controller" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="4eC-hF-j0z"/>
+                    <tabBarItem key="tabBarItem" title="Table View" image="table_30x30" id="4eC-hF-j0z"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6D5-w4-sYM">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -121,7 +120,7 @@
         <scene sceneID="7cI-1q-GTp">
             <objects>
                 <navigationController id="xdH-yJ-lQe" userLabel="Collection Navigation Controller" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="qwz-vf-Rsi"/>
+                    <tabBarItem key="tabBarItem" title="Grid View" image="collection1x" id="qwz-vf-Rsi"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ciI-xe-QQd">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -134,7 +133,7 @@
             </objects>
             <point key="canvasLocation" x="-1193" y="-342"/>
         </scene>
-        <!--Meme Collection View Controller-->
+        <!--Sent Memes-->
         <scene sceneID="jmB-da-1de">
             <objects>
                 <collectionViewController id="JL9-Nq-zbv" customClass="MemeCollectionViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
@@ -192,7 +191,7 @@
                             <outlet property="delegate" destination="JL9-Nq-zbv" id="myw-9Z-ZEb"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="lpq-e7-hee">
+                    <navigationItem key="navigationItem" title="Sent Memes" id="lpq-e7-hee">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="uXY-Fx-mfK">
                             <connections>
                                 <segue destination="BYZ-38-t0r" kind="show" id="6HV-uh-jBk"/>
@@ -338,11 +337,13 @@
     </scenes>
     <resources>
         <image name="camera" catalog="system" width="64" height="48"/>
+        <image name="collection1x" width="30" height="30.5"/>
         <image name="photo" catalog="system" width="64" height="46"/>
         <image name="plus" catalog="system" width="64" height="56"/>
         <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>
+        <image name="table_30x30" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="k4p-Mt-ZgN"/>
+        <segue reference="6HV-uh-jBk"/>
     </inferredMetricsTieBreakers>
 </document>
