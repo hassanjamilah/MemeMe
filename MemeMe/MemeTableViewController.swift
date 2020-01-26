@@ -53,6 +53,7 @@ class MemeTableViewController: UITableViewController {
         print ("hassan the count is : \(memes.count)")
         //return memes.count
         return memes.count
+        //return 10
     }
 
     
@@ -64,7 +65,9 @@ class MemeTableViewController: UITableViewController {
         cell.memeTopLabel.text = memes[row].topText
         cell.memeBottomLabel.text = memes[row].bottomText
         
-        //cell.imageView?.image = UIImage(named: "share")
+        //cell.imageView?.image = UIImage(named: "Image")
+        //cell.memeTopLabel.text = "Hello \(row)"
+        //cell.memeBottomLabel.text = "Hi \(row)"
         print ("hassan Hello cell")
         // Configure the cell...
 

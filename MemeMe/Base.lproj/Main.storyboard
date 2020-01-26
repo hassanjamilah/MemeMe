@@ -42,7 +42,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="103"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchImage" translatesAutoresizingMaskIntoConstraints="NO" id="EOC-s5-f6J">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EOC-s5-f6J">
                                             <rect key="frame" x="20" y="12" width="93" height="79"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="79" id="GEW-f1-g05"/>
@@ -50,32 +50,26 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jwu-dT-OBg">
-                                            <rect key="frame" x="121" y="12" width="283" height="28"/>
+                                            <rect key="frame" x="121" y="12" width="59" height="28"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y75-gY-gX7">
-                                            <rect key="frame" x="121" y="67" width="283" height="24"/>
+                                            <rect key="frame" x="121" y="67" width="48" height="24"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="EOC-s5-f6J" firstAttribute="leading" secondItem="ppT-yt-PXc" secondAttribute="leadingMargin" id="9xe-xB-nPU"/>
-                                        <constraint firstItem="EOC-s5-f6J" firstAttribute="top" secondItem="ppT-yt-PXc" secondAttribute="topMargin" constant="1" id="M62-2t-sKh"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="EOC-s5-f6J" secondAttribute="bottom" constant="1" id="Maa-Pm-GBU"/>
-                                        <constraint firstItem="EOC-s5-f6J" firstAttribute="centerY" secondItem="ppT-yt-PXc" secondAttribute="centerY" id="Mq2-VR-mAI"/>
-                                        <constraint firstItem="Jwu-dT-OBg" firstAttribute="leading" secondItem="EOC-s5-f6J" secondAttribute="trailing" constant="8" id="P2i-tc-dbZ"/>
-                                        <constraint firstItem="Jwu-dT-OBg" firstAttribute="top" secondItem="EOC-s5-f6J" secondAttribute="top" id="WxY-Fd-JMt"/>
-                                        <constraint firstItem="Y75-gY-gX7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="EOC-s5-f6J" secondAttribute="trailing" constant="8" symbolic="YES" id="XYS-tv-sTx"/>
-                                        <constraint firstItem="EOC-s5-f6J" firstAttribute="leading" secondItem="ppT-yt-PXc" secondAttribute="leadingMargin" id="ak3-B4-0U2"/>
-                                        <constraint firstItem="EOC-s5-f6J" firstAttribute="top" secondItem="ppT-yt-PXc" secondAttribute="topMargin" constant="1" id="jEa-fy-stZ"/>
-                                        <constraint firstAttribute="trailing" secondItem="Y75-gY-gX7" secondAttribute="trailing" constant="10" id="nnh-MN-u2k"/>
-                                        <constraint firstItem="Jwu-dT-OBg" firstAttribute="leading" secondItem="Y75-gY-gX7" secondAttribute="leading" id="r9g-jy-wsR"/>
-                                        <constraint firstAttribute="trailing" secondItem="Jwu-dT-OBg" secondAttribute="trailing" constant="10" id="sOY-6y-sEF"/>
-                                        <constraint firstItem="Y75-gY-gX7" firstAttribute="bottom" secondItem="EOC-s5-f6J" secondAttribute="bottom" id="sQs-yG-jUh"/>
+                                        <constraint firstItem="Y75-gY-gX7" firstAttribute="leading" secondItem="EOC-s5-f6J" secondAttribute="trailing" constant="8" id="4xn-dE-JjK"/>
+                                        <constraint firstItem="Jwu-dT-OBg" firstAttribute="leading" secondItem="EOC-s5-f6J" secondAttribute="trailing" constant="8" id="Rfu-9F-5sF"/>
+                                        <constraint firstItem="EOC-s5-f6J" firstAttribute="top" secondItem="ppT-yt-PXc" secondAttribute="topMargin" constant="1" id="XlO-6n-AHm"/>
+                                        <constraint firstItem="Jwu-dT-OBg" firstAttribute="top" secondItem="EOC-s5-f6J" secondAttribute="top" id="ZuA-UP-oYI"/>
+                                        <constraint firstItem="Y75-gY-gX7" firstAttribute="bottom" secondItem="EOC-s5-f6J" secondAttribute="bottom" id="sDM-FF-Fyq"/>
+                                        <constraint firstItem="EOC-s5-f6J" firstAttribute="leading" secondItem="ppT-yt-PXc" secondAttribute="leadingMargin" id="vqv-Ap-Vcm"/>
+                                        <constraint firstAttribute="bottom" secondItem="EOC-s5-f6J" secondAttribute="bottom" constant="12" id="ylK-Ql-bps"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.72886071330000002" green="0.94898378650000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -343,13 +337,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="LaunchImage" width="768" height="1024"/>
         <image name="camera" catalog="system" width="64" height="48"/>
         <image name="photo" catalog="system" width="64" height="46"/>
         <image name="plus" catalog="system" width="64" height="56"/>
         <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6HV-uh-jBk"/>
+        <segue reference="k4p-Mt-ZgN"/>
     </inferredMetricsTieBreakers>
 </document>
