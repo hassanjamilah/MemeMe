@@ -97,7 +97,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Sb-YI-MRy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-388.40579710144931" y="410.49107142857139"/>
+            <point key="canvasLocation" x="-510" y="410"/>
         </scene>
         <!--Table Navigation Controller-->
         <scene sceneID="PZO-1a-Kmq">
@@ -204,7 +204,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0gY-Wb-s9o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-243.47826086956525" y="-342.1875"/>
+            <point key="canvasLocation" x="-509" y="-342"/>
         </scene>
         <!--Details View Controller-->
         <scene sceneID="LcK-MW-Vc9">
@@ -233,7 +233,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pp9-7h-f8h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="979.71014492753636" y="-726.5625"/>
+            <point key="canvasLocation" x="619" y="-342"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -332,7 +332,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="775" y="-19"/>
+            <point key="canvasLocation" x="620" y="410"/>
         </scene>
     </scenes>
     <resources>
@@ -344,6 +344,6 @@
         <image name="table_30x30" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6HV-uh-jBk"/>
+        <segue reference="k4p-Mt-ZgN"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -2,7 +2,7 @@
 //  MemeCollectionViewController.swift
 //  MemeMe
 //
-//  Created by user on 23/01/2020.
+//  Created by Hassan on 23/01/2020.
 //  Copyright © 2020 Andalus. All rights reserved.
 //
 
@@ -16,15 +16,11 @@ class MemeCollectionViewController: UICollectionViewController {
      var space:CGFloat = 3.0
     var currentWidth:CGFloat!
     @IBOutlet var mCollectionView: UICollectionView!
+  
     
+    //MARK: Overrid the view methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("hassan collection view contoller loaded successfully")
-        let spacing:CGFloat = 3.0
-        let dimension = (view.frame.size.width - (2*spacing))/3
-        
-      
-        
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -32,35 +28,26 @@ class MemeCollectionViewController: UICollectionViewController {
             itemsPersRow = 5.0
                        space = 5.0
             currentWidth = size.width
-            print("Landscape \(currentWidth)")
         }else {
             itemsPersRow = 3.0
-            space = 1.0
+            space = 3.0
             currentWidth = size.width
-            print("Portrait \(currentWidth)")
         }
     }
     
+    /**
+     Listen for device orientation changes
+     */
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         itemsPersRow = 3.0
-         print("hassan collection view contoller viewd successfully")
         memes = MeMe.getSharedMemes() ;
-               print("hassan The size of memes is : \(memes.count)")
         mCollectionView.reloadData()
     }
+
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using [segue destinationViewController].
-     // Pass the selected object to the new view controller.
-     }
-     */
     
-    // MARK: UICollectionViewDataSource
+    // MARK: Collection View Delegate
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -69,9 +56,7 @@ class MemeCollectionViewController: UICollectionViewController {
     
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
         return memes.count
-        //return 15
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -80,9 +65,6 @@ class MemeCollectionViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! MemeCollectionViewCell
         cell.label.text=memes[index].topText
         cell.imageView.image = memes[index].resultImage
-       // cell.label.text = "Hello"
-        //cell.imageView.image = UIImage(named: "Image")
-        
         return cell
     }
     
@@ -91,63 +73,35 @@ class MemeCollectionViewController: UICollectionViewController {
         MeMe.viewDetails(index: indexPath.row, controller: self)
     }
     
-    // MARK: UICollectionViewDelegate
-
-    /*
-     // Uncomment this method to specify if the specified item should be highlighted during tracking
-     override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-     return true
-     }
-     */
-    
-    /*
-     // Uncomment this method to specify if the specified item should be selected
-     override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-     return true
-     }
-     */
-    
-    /*
-     // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-     override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-     return false
-     }
-     
-     override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-     return false
-     }
-     
-     override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
-     
-     }
-     */
- 
 
 }
 
 
+//MARK: Extenstion for handling the flow layout
 
 extension MemeCollectionViewController:UICollectionViewDelegateFlowLayout{
     
+    /**
+     Set the size of the item
+     */
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        if let currentWidth = currentWidth {
-            
-        }else {
+        if (currentWidth == nil){
             currentWidth = view.frame.size.width
-            print ("Default size : \(currentWidth)")
         }
-      
         let dimension = ( currentWidth - (itemsPersRow*space))/itemsPersRow
-        
         return CGSize(width: dimension, height: dimension)
-        
     }
     
-    
+    /**
+     Set the vertical spacing
+     */
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return space
     }
     
+    /**
+     Set the horizonal spacing
+     */
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return space
     }
