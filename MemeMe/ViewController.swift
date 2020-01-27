@@ -30,9 +30,12 @@ class ViewController: UIViewController  , UIImagePickerControllerDelegate , UINa
     
   
     //MARK: Define the text fields attributes
+ 
+    
     let textAttributes: [NSAttributedString.Key : Any]=[
         NSAttributedString.Key.font:UIFont(name: "HelveticaNeue-CondensedBlack", size: 24) ,
         NSAttributedString.Key.foregroundColor:UIColor.white ,
+        
         NSAttributedString.Key.strokeWidth:-5 ,
         NSAttributedString.Key.strokeColor:UIColor.black
         
@@ -61,6 +64,7 @@ class ViewController: UIViewController  , UIImagePickerControllerDelegate , UINa
     func initTextField(_ textfield:UITextField){
          textfield.delegate = clearTextDelegate
          textfield.defaultTextAttributes = textAttributes
+        textfield.textAlignment = .center
     }
     
     override func viewWillDisappear(_ animated: Bool) {

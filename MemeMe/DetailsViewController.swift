@@ -16,6 +16,7 @@ class DetailsViewController: UIViewController {
     //MARK: Read the meme
     override func viewDidLoad() {
         super.viewDidLoad()
+        myImageView.contentMode = .scaleAspectFit
         if let meme = meme{
             myImageView.image = meme.resultImage
         }
