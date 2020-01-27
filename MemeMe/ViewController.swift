@@ -48,18 +48,19 @@ class ViewController: UIViewController  , UIImagePickerControllerDelegate , UINa
             cameraButton.isEnabled = false
         }
         
-        topLabel.defaultTextAttributes = textAttributes
-        bottomLabel.defaultTextAttributes = textAttributes
         
        disableSaveAndShare(Disable: true)
         
         registerObservers()
         
-       
-        self.bottomLabel.delegate = clearTextDelegate
-        self.topLabel.delegate = clearTextDelegate
+        initTextField(self.bottomLabel)
+        initTextField(self.topLabel)
         
-        
+    }
+    
+    func initTextField(_ textfield:UITextField){
+         textfield.delegate = clearTextDelegate
+         textfield.defaultTextAttributes = textAttributes
     }
     
     override func viewWillDisappear(_ animated: Bool) {
